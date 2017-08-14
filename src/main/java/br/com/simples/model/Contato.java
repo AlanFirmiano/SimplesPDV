@@ -13,7 +13,7 @@ public class Contato {
 	
 	private String telefone;
 	private String celular;
-	private String emai;
+	private String email;
 	
 	public Contato(){
 		
@@ -22,7 +22,7 @@ public class Contato {
 	public Contato(String telefone, String celular, String email){
 		this.telefone = telefone;
 		this.celular = celular;
-		this.emai = email;
+		this.email = email;
 	}
 
 	public Integer getId() {
@@ -49,12 +49,12 @@ public class Contato {
 		this.celular = celular;
 	}
 
-	public String getEmai() {
-		return emai;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setEmai(String emai) {
-		this.emai = emai;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 }

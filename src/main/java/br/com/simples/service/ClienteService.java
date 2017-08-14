@@ -14,7 +14,7 @@ import br.com.simples.repository.ClienteRepository;
 public class ClienteService {
 	@Autowired
 	private ClienteRepository repository;
-
+	
 	public ResponseEntity<String> save(Cliente cliente){
 		repository.save(cliente);
 		return new ResponseEntity<String>("sucesso", HttpStatus.OK);		

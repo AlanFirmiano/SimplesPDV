@@ -1,7 +1,6 @@
 package br.com.simples.model;
 
-import java.util.Date;
-
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,12 +18,12 @@ public class Cliente {
 	private String cpf;
 	private String rg;
 	private String sexo;
-	private Date nascimento;
+	private String nascimento;
 	private String nomePai;
 	private String nomeMae;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Endereco endereco;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Contato contato;
 	
 	public Cliente(){
@@ -103,11 +102,11 @@ public class Cliente {
 		this.sexo = sexo;
 	}
 
-	public Date getNascimento() {
+	public String getNascimento() {
 		return nascimento;
 	}
 
-	public void setNascimento(Date nascimento) {
+	public void setNascimento(String nascimento) {
 		this.nascimento = nascimento;
 	}
 
