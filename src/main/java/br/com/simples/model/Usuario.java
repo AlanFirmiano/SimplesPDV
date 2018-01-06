@@ -10,9 +10,6 @@ public class Usuario {
 	@Id
 	@GeneratedValue
 	private Integer id;
-<<<<<<< HEAD
-	
-=======
 	private String nome;
 	private String senha;
 
@@ -43,5 +40,4 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
->>>>>>> User update
 }
