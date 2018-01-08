@@ -10,4 +10,5 @@ public class Devendo {
 	@Id
 	@GeneratedValue
 	private Integer id;
+
 }
