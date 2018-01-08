@@ -1,7 +1,10 @@
 package br.com.simples.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Compra {
@@ -12,7 +15,7 @@ public class Compra {
 	@ManyToOne
 	private Fornecedor fornecedor;
 	@OneToMany
-	private ArrayList<Item> itens;
+	private List<Item> itens;
 	private Double valorProdutos;
 	private Double desconto;
 	private Double totalCompra;
@@ -37,11 +40,11 @@ public class Compra {
 		this.fornecedor = fornecedor;
 	}
 
-	public ArrayList<Item> getItens() {
+	public List<Item> getItens() {
 		return itens;
 	}
 
-	public void setItens(ArrayList<Item> itens) {
+	public void setItens(List<Item> itens) {
 		this.itens = itens;
 	}
 

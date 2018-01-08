@@ -1,8 +1,11 @@
 package br.com.simples.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Venda {
@@ -11,11 +14,11 @@ public class Venda {
 	@GeneratedValue
 	private Integer id;
 	private Date data;
-	@OneToMany
-	private ArrayList<Item> itens;
 	private Double valorProdutos;
 	private Double desconto;
 	private Double valorTotal;
+	@ManyToMany(cascade={CascadeType.ALL})
+	private List<Item> itens;
 	@ManyToOne
 	private Vendedor vendedor;
 	@ManyToOne
@@ -41,11 +44,11 @@ public class Venda {
 		this.data = data;
 	}
 
-	public ArrayList<Item> getItens() {
+	public List<Item> getItens() {
 		return itens;
 	}
 
-	public void setItens(ArrayList<Item> itens) {
+	public void setItens(List<Item> itens) {
 		this.itens = itens;
 	}
 

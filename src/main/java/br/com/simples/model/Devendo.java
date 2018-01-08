@@ -13,6 +13,7 @@ public class Devendo {
 	@OneToOne
 	private Venda venda;
 	private Double valorEntrada;
+	private boolean status;
 
 	public Devendo(){
 
@@ -48,5 +49,13 @@ public class Devendo {
 
 	public void setValorEntrada(Double valorEntrada) {
 		this.valorEntrada = valorEntrada;
+	}
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
 	}
 }
