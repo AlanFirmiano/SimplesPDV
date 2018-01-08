@@ -12,13 +12,13 @@ public class Venda {
 	private Integer id;
 	private Date data;
 	@OneToMany
-	private ArrayList<Produto> produtos;
+	private ArrayList<Item> itens;
 	private Double valorProdutos;
 	private Double desconto;
 	private Double valorTotal;
-	@OneToOne
+	@ManyToOne
 	private Vendedor vendedor;
-	@OneToOne
+	@ManyToOne
 	private Cliente cliente;
 
 	public Venda(){
@@ -41,12 +41,12 @@ public class Venda {
 		this.data = data;
 	}
 
-	public ArrayList<Produto> getProdutos() {
-		return produtos;
+	public ArrayList<Item> getItens() {
+		return itens;
 	}
 
-	public void setProdutos(ArrayList<Produto> produtos) {
-		this.produtos = produtos;
+	public void setItens(ArrayList<Item> itens) {
+		this.itens = itens;
 	}
 
 	public Double getValorProdutos() {

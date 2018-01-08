@@ -11,6 +11,7 @@ public class Caixa {
 	@GeneratedValue
 	private Integer id;
 	private String numero;
+	private Double valorCaixa;
 
 	public Caixa(){
 
@@ -30,5 +31,13 @@ public class Caixa {
 
 	public void setNumero(String numero) {
 		this.numero = numero;
+	}
+
+	public Double getValorCaixa() {
+		return valorCaixa;
+	}
+
+	public void setValorCaixa(Double valorCaixa) {
+		this.valorCaixa = valorCaixa;
 	}
 }

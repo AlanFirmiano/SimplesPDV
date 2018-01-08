@@ -9,10 +9,10 @@ public class Compra {
 	@Id
 	@GeneratedValue
 	private Integer id;
-	@OneToOne
+	@ManyToOne
 	private Fornecedor fornecedor;
 	@OneToMany
-	private ArrayList<Produto> produtos;
+	private ArrayList<Item> itens;
 	private Double valorProdutos;
 	private Double desconto;
 	private Double totalCompra;
@@ -37,12 +37,12 @@ public class Compra {
 		this.fornecedor = fornecedor;
 	}
 
-	public ArrayList<Produto> getProdutos() {
-		return produtos;
+	public ArrayList<Item> getItens() {
+		return itens;
 	}
 
-	public void setProdutos(ArrayList<Produto> produtos) {
-		this.produtos = produtos;
+	public void setItens(ArrayList<Item> itens) {
+		this.itens = itens;
 	}
 
 	public Double getValorProdutos() {
