@@ -21,11 +21,11 @@ public class Produto {
 	private Fornecedor fornecedor;
 	private Double precoCompra;
 	private Double precoCusto;
-	private Integer lucroEsperado;
+	private Double lucroEsperado;
 	private Double precoVenda;
-	private Integer desconto;
-	private Integer estoque;
-	private Integer estoqueMinimo;
+	private Double desconto;
+	private Double estoque;
+	private Double estoqueMinimo;
 	private Date vencimento;
 	
 	public Produto(){
@@ -88,11 +88,11 @@ public class Produto {
 		this.precoCusto = precoCusto;
 	}
 
-	public Integer getLucroEsperado() {
+	public Double getLucroEsperado() {
 		return lucroEsperado;
 	}
 
-	public void setLucroEsperado(Integer lucroEsperado) {
+	public void setLucroEsperado(Double lucroEsperado) {
 		this.lucroEsperado = lucroEsperado;
 	}
 
@@ -104,27 +104,27 @@ public class Produto {
 		this.precoVenda = precoVenda;
 	}
 
-	public Integer getDesconto() {
+	public Double getDesconto() {
 		return desconto;
 	}
 
-	public void setDesconto(Integer desconto) {
+	public void setDesconto(Double desconto) {
 		this.desconto = desconto;
 	}
 
-	public Integer getEstoque() {
+	public Double getEstoque() {
 		return estoque;
 	}
 
-	public void setEstoque(Integer estoque) {
+	public void setEstoque(Double estoque) {
 		this.estoque = estoque;
 	}
 
-	public Integer getEstoqueMinimo() {
+	public Double getEstoqueMinimo() {
 		return estoqueMinimo;
 	}
 
-	public void setEstoqueMinimo(Integer estoqueMinimo) {
+	public void setEstoqueMinimo(Double estoqueMinimo) {
 		this.estoqueMinimo = estoqueMinimo;
 	}
 
